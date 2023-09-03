@@ -1,0 +1,24 @@
+[user]
+  name = M.Emre Nefesli
+  email = emrenefesli@outlook.com
+[core]
+  editor = vim
+[init]
+  defaultBranch = main
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[web]
+  browser = firefox
+[credential]
+  helper = osxkeychain
+[pull]
+  rebase = true
+[merge]
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+[alias]
+	d = difftool
