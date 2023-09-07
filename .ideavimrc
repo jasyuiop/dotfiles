@@ -15,7 +15,7 @@ set ideastatusicon=gray
 set idearefactormode=keep
 
 """ Map leader to space ---------------------
-let mapleader=" "
+let mapleader=","
 
 """ Plugins  --------------------------------
 set commentary
