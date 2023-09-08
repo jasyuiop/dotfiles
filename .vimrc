@@ -77,7 +77,7 @@ set textwidth=72
 " Ruler formating
 set ruf=%40(%=%#LineNr#%.50F\ \[%{strlen(&ft)?&ft:'none'}]\ %l:%c\ %p%%%)
 
-" Macos clipboard integration
+" Clipboard integration
 set clipboard^=unnamed
 set clipboard^=unnamedplus
 
