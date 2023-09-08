@@ -26,7 +26,7 @@ set commentary
 nnoremap <leader>w :w!<cr>
 nnoremap <silent> <leader>q :q!<CR>
 
-" disable search highlighting with <space><space> when refreshing screen
+" Disable search highlighting with C-l when refreshing screen
 nnoremap <C-l> :nohl<CR>
 
 " Don't use Ex mode, use Q for formatting.
