@@ -21,7 +21,7 @@ bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 
 # Nicer prompt.
-PROMPT="%F{green}  %3~ %F{white}"$'\n'"$ "
+PROMPT="%F{green}# %3~ %F{white}"$'\n'"$ "
 RPROMPT='$GITSTATUS_PROMPT'
 
 # Completions.
