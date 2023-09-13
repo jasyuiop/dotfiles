@@ -34,7 +34,7 @@ export EDITOR='vim'
 export GOPATH=$HOME/go
 export JAVA_HOME="$(/usr/libexec/java_home -v 17.0.8.1)"
 export TERM=screen-256color
-export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/go/bin:/$HOME/.docker/bin:/usr/local/git/bin:$PATH
+export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/go/bin:/$HOME/.docker/bin:/usr/local/git/bin:/opt/homebrew/opt/node@18/bin:$PATH
 
 # History file configuration
 export HISTFILE=~/.zsh_history
@@ -79,8 +79,3 @@ alias fcpreset='rm ~/Library/Application\ Support/.ffuserdata'
 
 # Tell homebrew to not autoupdate every single time I run it (just once a week).
 export HOMEBREW_AUTO_UPDATE_SECS=604800
-
-# NVM for nodejs
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
