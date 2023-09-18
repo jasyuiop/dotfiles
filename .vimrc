@@ -103,6 +103,7 @@ augroup CloseLoclistWindowGroup
 augroup END
 
 " Filetypes related settings
+autocmd FileType java setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType json setlocal expandtab shiftwidth=2 tabstop=2
