@@ -31,10 +31,8 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 # User configuration
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export EDITOR='vim'
-export GOPATH=$HOME/go
-export JAVA_HOME="$(/usr/libexec/java_home -v 17.0.8.1)"
 export TERM=screen-256color
-export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/go/bin:/$HOME/.docker/bin:/usr/local/git/bin:/opt/homebrew/opt/node@18/bin:$PATH
+export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:/$HOME/.docker/bin:/usr/local/git/bin:$PATH
 
 # History file configuration
 export HISTFILE=~/.zsh_history

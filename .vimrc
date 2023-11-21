@@ -96,15 +96,7 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 " Start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" Force loclist to always close when buffer does (affects vim-go, etc.)
-augroup CloseLoclistWindowGroup
-  autocmd!
-  autocmd QuitPre * if empty(&buftype) | lclose | endif
-augroup END
-
 " Filetypes related settings
-autocmd FileType java setlocal expandtab tabstop=4 shiftwidth=4
-autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType json setlocal expandtab shiftwidth=2 tabstop=2
 autocmd BufNewFile,BufRead *.sh setlocal expandtab shiftwidth=2 tabstop=2
@@ -206,7 +198,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'morhetz/gruvbox'
   Plug 'dense-analysis/ale'
   Plug 'ervandew/supertab'
-  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   call plug#end()
 
   " Color settings
@@ -215,17 +206,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   set termguicolors
   let g:gruvbox_contrast_dark = "hard"
   let g:gruvbox_contrast_light = "hard"
-
-  " vim-go
-  let g:go_list_type = "quickfix"
-  let g:go_fmt_fail_silently = 1
-  let g:go_diagnostics_level = 2
-  let g:go_highlight_build_constraints = 1
-  let g:go_highlight_operators = 1
-  autocmd FileType go nmap <leader>b  <Plug>(go-build)
-  autocmd FileType go nmap <leader>r  <Plug>(go-run)
-  au FileType go nmap <leader>m ilog.Print("made")<CR><ESC>
-  au FileType go nmap <leader>n iif err != nil {return err}<CR><ESC>
 
   " Supertab
   let g:SuperTabDefaultCompletionType = "context"
@@ -236,7 +216,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   let g:ale_lint_on_text_changed = 'never'
   let g:ale_virtualtext_cursor = 'disabled'
   let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-  let g:ale_linters = {'go': ['gometalinter', 'gofmt','gobuild']}
   let g:ale_fix_on_save = 1
   let g:ale_fixers = {
         \ '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -244,6 +223,5 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
         \}
 
 else
-  autocmd vimleavepre *.go !gofmt -w %
   autocmd vimleavepre *.sh !shfmt -w %
 endif
