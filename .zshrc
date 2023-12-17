@@ -32,7 +32,7 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export EDITOR='vim'
 export TERM=screen-256color
-export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:/$HOME/.docker/bin:/usr/local/git/bin:$PATH
+export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:/$HOME/.docker/bin:/usr/local/git/bin:/opt/homebrew/opt/node@20/bin:$PATH
 
 # History file configuration
 export HISTFILE=~/.zsh_history
