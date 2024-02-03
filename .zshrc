@@ -32,7 +32,7 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export EDITOR='vim'
 export TERM=screen-256color
-export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:/$HOME/.docker/bin:/usr/local/git/bin:/opt/homebrew/opt/node@20/bin:$PATH
+export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.docker/bin:/usr/local/git/bin:/opt/homebrew/opt/node@20/bin:$PATH
 
 # History file configuration
 export HISTFILE=~/.zsh_history
@@ -74,6 +74,9 @@ alias bubu='brew update && brew outdated && brew upgrade && brew cleanup'
 
 # Final cut pro reset trail
 alias fcpreset='rm ~/Library/Application\ Support/.ffuserdata'
+
+# Aria2
+alias aria='aria2c --conf-path=$HOME/.aria2/aria2.conf'
 
 # Tell homebrew to not autoupdate every single time I run it (just once a week).
 export HOMEBREW_AUTO_UPDATE_SECS=604800
