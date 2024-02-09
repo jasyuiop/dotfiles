@@ -61,6 +61,7 @@ alias chmox='chmod +x'
 alias diff='diff --color'
 alias more='less'
 alias ll='ls -l'
+alias rm='rm -I'
 
 # Git alias
 alias gs='git status'
@@ -68,6 +69,12 @@ alias gc='git commit'
 alias gp='git pull --rebase'
 alias gcam='git commit -am'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+
+# Python alias
+alias python='python3.11'
+alias pip='pip3.11'
+alias activate='chmod +x ./.venv/bin/activate && source ./.venv/bin/activate'
+alias venv='python -m venv .venv'
 
 # Brew alias
 alias bubu='brew update && brew outdated && brew upgrade && brew cleanup'
