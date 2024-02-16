@@ -14,8 +14,6 @@
     browser = firefox
 [credential]
     helper = osxkeychain
-[pull]
-    rebase = true
 [merge]
     tool = vimdiff
 [diff]
