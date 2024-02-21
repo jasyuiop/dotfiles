@@ -3,11 +3,11 @@
     email = emrenefesli@outlook.com
 [core]
     editor = vim
-	  excludesfile = /Users/jasyuiop/.gitignore_global
+    excludesfile = /Users/jasyuiop/.gitignore_global
 [init]
     defaultBranch = main
 [color]
-	  ui = auto
+    ui = auto
 [web]
     browser = firefox
 [credential]
@@ -19,4 +19,4 @@
 [alias]
     d = difftool
 [pull]
-	rebase = false
+    rebase = false
