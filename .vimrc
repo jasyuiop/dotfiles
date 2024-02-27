@@ -102,7 +102,9 @@ autocmd FileType json setlocal expandtab shiftwidth=2 tabstop=2
 autocmd BufNewFile,BufRead *.sh setlocal expandtab shiftwidth=2 tabstop=2
 autocmd BufNewFile,BufRead *.vim setlocal expandtab shiftwidth=2 tabstop=2
 autocmd BufNewFile,BufRead *.txt setlocal noet ts=4 sw=4
-autocmd BufNewFile,BufRead *.md setlocal noet ts=4 sw=4
+autocmd BufNewFile,BufRead *.html setlocal noet ts=2 sw=2
+autocmd BufNewFile,BufRead *.js setlocal noet ts=4 sw=4
+autocmd BufNewFile,BufRead *.css setlocal noet ts=2 sw=2
 
 " Mark trailing spaces as errors
 match IncSearch '\s\+$'
@@ -220,6 +222,9 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   let g:ale_fixers = {
         \ '*': ['remove_trailing_lines', 'trim_whitespace'],
         \ 'sh': ['shfmt'],
+        \ 'css': ['prettier'],
+        \ 'html': ['prettier'],
+        \ 'javascript': ['prettier', 'eslint'],
         \}
 
 else
