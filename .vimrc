@@ -221,12 +221,8 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   let g:ale_fix_on_save = 1
   let g:ale_fixers = {
         \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-        \ 'sh': ['shfmt'],
-        \ 'css': ['prettier'],
-        \ 'html': ['prettier'],
-        \ 'javascript': ['prettier', 'eslint'],
+        \ 'sh': ['shfmt']
         \}
-
 else
   autocmd vimleavepre *.sh !shfmt -w %
 endif
