@@ -79,15 +79,8 @@ alias venv='python -m venv .venv'
 # Brew alias
 alias bubu='brew update && brew outdated && brew upgrade && brew cleanup'
 
-# Final cut pro reset trail
-alias fcpreset='rm ~/Library/Application\ Support/.ffuserdata'
-
 # Aria2
 alias aria='aria2c --conf-path=$HOME/.aria2/aria2.conf'
 
 # Tell homebrew to not autoupdate every single time I run it (just once a week).
 export HOMEBREW_AUTO_UPDATE_SECS=604800
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -214,7 +214,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 
   " Ale
-  let g:ale_disable_lsp = 1
+  let g:ale_enable_lsp = 1
   let g:ale_lint_on_text_changed = 'never'
   let g:ale_virtualtext_cursor = 'disabled'
   let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
