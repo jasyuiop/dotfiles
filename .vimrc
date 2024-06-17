@@ -115,6 +115,17 @@ if executable('rg')
     autocmd QuickFixCmdPost *grep* cwindow
 endif
 
+"fix bork bash detection
+if has("eval")  " vim-tiny detection
+fun! s:DetectBash()
+    if getline(1) == '#!/usr/bin/bash' || getline(1) == '#!/bin/bash'
+        set ft=bash
+        set shiftwidth=2
+    endif
+endfun
+autocmd BufNewFile,BufRead * call s:DetectBash()
+endif
+
 " --- Keybinds ---
 
 " Fast save / fast quit
@@ -145,6 +156,7 @@ nnoremap öc :cnext<CR>
 " Location list
 nnoremap çl :lprevious<CR>
 nnoremap öl :lnext<CR>
+nnoremap ll :lopen<CR>
 
 " Close quickfix window
 nnoremap <leader>c :cclose<CR>
@@ -190,6 +202,9 @@ nnoremap <Leader>j :buffers<CR>:buffer<Space>
 " Leader d deletes the current buffer
 nnoremap <Leader>d :bdelete<CR>
 
+" Function keys
+map <F1> :set number!<CR> :set relativenumber!<CR>
+
 " --- Plugins ---
 
 if filereadable(expand("~/.vim/autoload/plug.vim"))
@@ -214,11 +229,14 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 
   " Ale
-  let g:ale_enable_lsp = 1
+  let g:ale_disable_lsp = 1
   let g:ale_lint_on_text_changed = 'never'
   let g:ale_virtualtext_cursor = 'disabled'
   let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
   let g:ale_fix_on_save = 1
+  let g:ale_linters = {
+        \ 'sh': ['shellcheck']
+        \}
   let g:ale_fixers = {
         \ '*': ['remove_trailing_lines', 'trim_whitespace'],
         \ 'sh': ['shfmt']
