@@ -115,22 +115,10 @@ if executable('rg')
     autocmd QuickFixCmdPost *grep* cwindow
 endif
 
-"fix bork bash detection
-if has("eval")  " vim-tiny detection
-fun! s:DetectBash()
-    if getline(1) == '#!/usr/bin/bash' || getline(1) == '#!/bin/bash'
-        set ft=bash
-        set shiftwidth=2
-    endif
-endfun
-autocmd BufNewFile,BufRead * call s:DetectBash()
-endif
-
 " --- Keybinds ---
 
-" Fast save / fast quit
+" Fast save
 nnoremap <leader>w :w!<cr>
-nnoremap <silent> <leader>q :q!<CR>
 
 " Disable search highlighting visual, normal and insert mode
 nnoremap <C-L> :nohlsearch<CR><C-L>
@@ -146,17 +134,8 @@ nnoremap \ :grep<SPACE>
 " Leader ff invokes find
 nnoremap <leader>ff :find<SPACE>
 
-" Quick moves
-" Buffers
-nnoremap çb :bprevious<CR>
-nnoremap öb :bnext<CR>
-" Quickfix list
-nnoremap çc :cprevious<CR>
-nnoremap öc :cnext<CR>
 " Location list
-nnoremap çl :lprevious<CR>
-nnoremap öl :lnext<CR>
-nnoremap ll :lopen<CR>
+nnoremap <leader>l :lopen<CR>
 
 " Close quickfix window
 nnoremap <leader>c :cclose<CR>
@@ -190,11 +169,8 @@ nnoremap Q <nop>
 nnoremap J mzJ`z
 
 " Move entire line up and down
-vnoremap <C-S-DOWN> :m'>+<CR>gv=gv
-vnoremap <C-S-UP> :m-2<CR>gv=gv
-
-" Quicker way to switch to the current buffer's
-nnoremap <Backspace> <C-^>
+vnoremap <C-S-J> :m'>+<CR>gv=gv
+vnoremap <C-S-K> :m-2<CR>gv=gv
 
 " Leader j jumps to buffers
 nnoremap <Leader>j :buffers<CR>:buffer<Space>
