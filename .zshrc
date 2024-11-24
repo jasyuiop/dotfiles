@@ -40,6 +40,7 @@ export LANG=en_US.UTF-8
 export HISTFILE=~/.zsh_history
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000000
+export SAVEHIST=500000
 
 # History command configuration
 setopt extended_history
@@ -48,6 +49,8 @@ setopt hist_find_no_dups
 setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
 
 # Git bare setup for my config.
 alias dotfiles='/usr/bin/git --git-dir=/Users/jasyuiop/.cfg/ --work-tree=/Users/jasyuiop'
