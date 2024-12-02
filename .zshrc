@@ -67,6 +67,7 @@ alias diff='diff --color'
 alias more='less'
 alias ll='ls -l'
 alias rm='rm -I'
+alias vim='nvim'
 
 # Git alias
 alias gs='git status'
