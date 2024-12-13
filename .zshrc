@@ -30,7 +30,7 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 
 # User configuration
 eval "$(/opt/homebrew/bin/brew shellenv)"
-export EDITOR='vim'
+export EDITOR='nvim'
 export GOPATH=$HOME/.go
 export TERM=screen-256color
 export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.docker/bin:/usr/local/git/bin:/opt/homebrew/opt/node@20/bin:$HOME/.aider/.venv/bin:$PATH
