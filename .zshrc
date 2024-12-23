@@ -13,7 +13,7 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/opt/gitstatus/gitstatus.prompt.zsh
 
 # Vim gruvbox color palette
-source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
+# source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 
 # Allow history search via up/down keys.
 source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -98,3 +98,7 @@ alias aider="aider --model gemini/gemini-1.5-pro-latest --env-file ~/.aider/.env
 
 # Tell homebrew to not autoupdate every single time I run it (just once a week).
 export HOMEBREW_AUTO_UPDATE_SECS=604800
+
+# NVM
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
