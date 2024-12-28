@@ -7,7 +7,7 @@ export CLICOLOR_FORCE=1
 unsetopt nomatch
 
 # Enable plugins.
-plugins=(git brew history docker docker-compose)
+plugins=(git brew history docker docker-compose podman)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/opt/gitstatus/gitstatus.prompt.zsh
@@ -33,7 +33,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export EDITOR='nvim'
 export GOPATH=$HOME/.go
 export TERM=screen-256color
-export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.docker/bin:/usr/local/git/bin:/opt/homebrew/opt/node@20/bin:$HOME/.aider/.venv/bin:$PATH
+export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:/usr/local/git/bin:$PATH
 export LANG=en_US.UTF-8
 
 # History file configuration
@@ -92,9 +92,6 @@ alias aria='aria2c --conf-path=$HOME/.aria2/aria2.conf'
 alias podu='podman machine start'
 alias podd='podman machine stop'
 alias podi='podman machine info'
-
-# Aider
-alias aider="aider --model gemini/gemini-1.5-pro-latest --env-file ~/.aider/.env --config ~/.aider/.aider.conf.yml"
 
 # Tell homebrew to not autoupdate every single time I run it (just once a week).
 export HOMEBREW_AUTO_UPDATE_SECS=604800
