@@ -30,7 +30,7 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 
 # User configuration
 eval "$(/opt/homebrew/bin/brew shellenv)"
-export EDITOR='nvim'
+export EDITOR='vim'
 export GOPATH=$HOME/.go
 export TERM=screen-256color
 export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:/usr/local/git/bin:$PATH
@@ -67,7 +67,7 @@ alias diff='diff --color'
 alias more='less'
 alias ll='ls -l'
 alias rm='rm -I'
-alias vim='nvim'
+alias vi='vim'
 
 # Git alias
 alias gs='git status'

@@ -195,7 +195,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 
   " Color settings
   autocmd vimenter * ++nested colorscheme gruvbox
-  set background=light
+  set background=dark
   set termguicolors
   let g:gruvbox_contrast_dark = "hard"
   let g:gruvbox_contrast_light = "hard"
