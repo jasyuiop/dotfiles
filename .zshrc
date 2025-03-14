@@ -33,7 +33,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export EDITOR='vim'
 export GOPATH=$HOME/.go
 export TERM=screen-256color
-export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:/usr/local/git/bin:$PATH
+export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:/usr/local/git/bin:$HOME/Library/Python/3.9/bin:$HOME/.local/bin:$PATH
 export LANG=en_US.UTF-8
 
 # History file configuration
@@ -77,8 +77,8 @@ alias gcam='git commit -am'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 # Python alias
-alias python='python3.11'
-alias pip='pip3.11'
+alias python='python3'
+alias pip='pip3'
 alias activate='chmod +x ./.venv/bin/activate && source ./.venv/bin/activate'
 alias venv='python -m venv .venv'
 
@@ -92,6 +92,7 @@ alias aria='aria2c --conf-path=$HOME/.aria2/aria2.conf'
 alias podu='podman machine start'
 alias podd='podman machine stop'
 alias podi='podman machine info'
+alias docker='podman'
 
 # Tell homebrew to not autoupdate every single time I run it (just once a week).
 export HOMEBREW_AUTO_UPDATE_SECS=604800
