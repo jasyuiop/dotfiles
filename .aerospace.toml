@@ -3,7 +3,7 @@ start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
-accordion-padding = 8
+accordion-padding = 15
 
 default-root-container-layout = 'accordion'
 
@@ -58,6 +58,9 @@ automatically-unhide-macos-hidden-apps = true
 
     alt-tab = 'workspace-back-and-forth'
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+    alt-f = 'fullscreen'
+    alt-ctrl-f = 'macos-native-fullscreen'
 
     alt-enter = 'mode service'
 
